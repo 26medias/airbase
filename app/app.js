@@ -31,7 +31,11 @@ angular.module('airbase', ['ngMaterial','ngJsonExplorer']).controller('airbaseCo
 	$scope.input = {
 		error:	false,
 		query:	"",
+		cursor:	0,
 		send:	function() {
+			if (!$scope.input.query || $scope.input.query == '') {
+				return false;
+			}
 			console.log("Send", $scope.input.query);
 			try {
 				var obj = $scope.$eval($scope.input.query);
@@ -67,9 +71,15 @@ angular.module('airbase', ['ngMaterial','ngJsonExplorer']).controller('airbaseCo
 				scope.$apply(function () {
 					scope.$eval(attrs.ngEnter);
 				});
-				event.preventDefault();
+				//event.preventDefault();
 			}
 		});
+	};
+}).directive('ngPress', function () {
+	return function (scope, element, attrs) {
+		/*document.keydown(function (event) {
+			console.log("event",event);
+		});*/
 	};
 }).directive('ngEscape', function () {
 	return function (scope, element, attrs) {

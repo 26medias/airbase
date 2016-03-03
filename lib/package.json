@@ -4,7 +4,7 @@
     "email": "julien@twenty-six-medias.com",
     "url": "http://www.twenty-six-medias.com/"
   },
-  "name": "airbase-ui",
+  "name": "airbase",
   "description": "airbase",
   "version": "1.0.0",
   "homepage": "https://github.com/26medias/airbase",
@@ -23,9 +23,8 @@
     "node": "*"
   },
   "dependencies": {
-    "electron": "latest",
-    "app":	"latest",
-    "firebase":	"latest"
+    "underscore": "latest",
+    "firebase": "latest"
   },
   "readmeFilename": "readme.md",
   "bugs": {

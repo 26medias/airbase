@@ -10,6 +10,7 @@
 		<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular-messages.min.js"></script>
 		<script src="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.js"></script>
 		<script src="libs/angular-json-explorer.js"></script>
+		<script src="libs/mousetrap.min.js"></script>
 		<link href="http://ajax.googleapis.com/ajax/libs/angular_material/1.0.0/angular-material.min.css" rel="stylesheet">
 		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
 		<link href="libs/angular-json-explorer.css" rel="stylesheet">
@@ -63,7 +64,7 @@
 			}
 		</style>
 	</head>
-	<body>
+	<body ng-press="input.send()">
 		<div class="container">
 			<div class="console">
 				<div class="entry" ng-repeat="msg in messages">
